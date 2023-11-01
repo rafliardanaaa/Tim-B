@@ -1,2 +1,2 @@
 # Tim-B
-Merupakan apliaksi klinik dalam program Teaching Factory | Project Based Learning
+Merupakan aplikasi klinik dalam program Teaching Factory | Project Based Learning
