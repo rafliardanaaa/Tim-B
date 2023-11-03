@@ -35,3 +35,7 @@ Route::post('/sign-up', [RegisuserController::class, 'store']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+Route::get('/pegawai', function () {
+    return view('dashboard-pegawai');
+});
