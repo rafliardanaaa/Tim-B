@@ -42,12 +42,12 @@
 
     </div>
     <div class="bg justify-content-center flex align-items-center text-center" style="margin: 100px; margin-top: 150px;">
-        <h1 class="text-dark text-center">Hello, {{ auth()->user()->name }}!</h1>
+        <h1 class="text-dark text-center mb-4">Hello, {{ auth()->user()->name }}!</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga pariatur numquam tenetur autem aperiam ipsa, eligendi, voluptatibus officiis molestiae non inventore dolor ad? Natus doloremque suscipit, optio minima eveniet neque.</p>
 
         <form action="{{ route('user.logout') }}" method="get">
             @csrf
-            <button type="submit" class="btn btn-primary w-100 mb-4">Logout</button>
+            <button type="submit" class="btn btn-primary w-100">Logout</button>
         </form>
     </div>
 </body>

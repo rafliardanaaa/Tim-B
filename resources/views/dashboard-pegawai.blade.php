@@ -37,17 +37,17 @@
         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
             <img class="rounded-circle me-lg-2" src="{{ asset('28_img/user.jpg') }}" alt=""
                 style="width: 40px; height: 40px;">
-            <span class="d-none d-lg-inline-flex text-dark">Heloo</span>
+            <span class="d-none d-lg-inline-flex text-dark">{sesion}</span>
         </a>
 
     </div>
-    <div class="bg justify-content-center flex align-items-center text-center" style="margin: 100px; margin-top: 150px;">
-        <h1 class="text-dark text-center">Hello,</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga pariatur numquam tenetur autem aperiam ipsa, eligendi, voluptatibus officiis molestiae non inventore dolor ad? Natus doloremque suscipit, optio minima eveniet neque.</p>
+    <div class="bg2 justify-content-center flex align-items-center text-center" style="margin: 100px; margin-top: 150px;">
+        <h1 class="text-white text-center mb-4">Hello,</h1>
+        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga pariatur numquam tenetur autem aperiam ipsa, eligendi, voluptatibus officiis molestiae non inventore dolor ad? Natus doloremque suscipit, optio minima eveniet neque.</p>
 
         <form action="{{ route('user.logout') }}" method="get">
             @csrf
-            <button type="submit" class="btn btn-info w-100">Logout</button>
+            <button type="submit" class="btn btn-info w-100 text-dark">Logout</button>
         </form>
     </div>
 </body>
