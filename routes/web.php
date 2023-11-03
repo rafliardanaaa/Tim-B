@@ -19,11 +19,7 @@ use App\Http\Controllers\LoginController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/landing', function () {
-    return view('welcome');
+    return view('landing');
 });
 
 Route::get('/sign-in', [LoguserController::class, 'index'])->name('sign-in');

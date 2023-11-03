@@ -34,6 +34,10 @@ class LoguserController extends Controller
         Auth::logout();
 
     // Redirect ke halaman logout atau halaman lain yang Anda inginkan.
+<<<<<<< HEAD
     return redirect('')->with('succes', 'berhasil keluar');
+=======
+    return redirect('/')->with('succes', 'berhasil keluar');
+>>>>>>> 78e3e3f14fa4063d6a4d282eb8a11ec447ccd206
     }
 }
