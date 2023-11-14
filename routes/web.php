@@ -39,3 +39,10 @@ Route::get('/dashboard', function () {
 Route::get('/pegawai', function () {
     return view('dashboard-pegawai');
 });
+
+Route::get('data-pegawai', function () {
+    return view('data.pegawai');
+});
+Route::get('data-user', function () {
+    return view('data.user');
+});

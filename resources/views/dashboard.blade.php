@@ -1,6 +1,6 @@
 @extends('sidebar')
 
-@section('contnt')
+@section('content')
 
 <div class="bg justify-content-center flex align-items-center text-center" style="margin: 100px; margin-top: 150px; margin-left: 360px;">
     <h1 class="text-dark text-center mb-4">Hello, {{ auth()->user()->name }}!</h1>

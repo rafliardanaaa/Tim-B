@@ -56,8 +56,8 @@
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                        <h6 class="mb-0">Jhon Doe</h6>
-                        <span>Admin</span>
+                        <h6 class="mb-0"> auth()->user()->username </h6>
+                        <span> $user->level </span>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
@@ -65,8 +65,8 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Data</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="button.html" class="dropdown-item">User</a>
-                            <a href="typography.html" class="dropdown-item">Pegawai</a>
+                            <a href="{{ url('data-user') }}" class="dropdown-item">User</a>
+                            <a href="{{ url('data-pegawai') }}" class="dropdown-item">Pegawai</a>
                         </div>
                     </div>
                 </div>
