@@ -5,9 +5,21 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Pegawai;
 
 class User extends Authenticatable
 {
+    
+        protected $table = 'users';
+        protected $primaryKey = 'id_user';
+    
+        public function pegawai()
+        {
+            return $this->belongsTo(Pegawai::class, 'id_pegawai_user', 'id_pegawai');
+        }
+    
+
+
     use Notifiable;
 
     /**
