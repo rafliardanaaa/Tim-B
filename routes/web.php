@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisuserController;
 use App\Http\Controllers\LoguserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\UserController;
 
 
 /*
@@ -39,3 +41,9 @@ Route::post('/sign-up', [RegisuserController::class, 'store']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+// Rute untuk Pegawai
+Route::resource('pegawai', 'PegawaiController');
+
+// Rute untuk User
+Route::resource('user', 'UserController');
