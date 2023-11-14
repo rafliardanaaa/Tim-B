@@ -97,7 +97,7 @@
                     <div class="">
                         <!-- Title -->
                         <div class="">
-                            <h1 class="text-center mb-5 text-dark">SIGN IN</h1>
+                            <h2 class="text-center mb-5 text-dark">SIGN IN</h2>
                         </div>
 
                         <!-- alert start -->
@@ -116,7 +116,20 @@
                             @endif
                         <!-- alert end -->
 
-                        <!-- email -->
+
+                        <!--section-->
+
+                        <div class="form-floating mb-3 text-dark">
+                                <select class="form-select bg-transparent border-danger text-dark" id="level"
+                                    aria-label="Floating label select example">
+                                    <option selected>Select Your Level..</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="pegawai">Pegawai</option>
+                                </select>
+                                <label for="floatingSelect">Level Admin</label>
+                            </div>
+
+                        <!-- email -->  
                         <div class="form-floating border-bottom border-danger mb-3 text-dark">
                             <input type="email" name="email" class="form-control bg-transparent border-0 form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" value="{{ old('email') }}" required autofocus>
                             <label for="email" name="username">Email Address</label>

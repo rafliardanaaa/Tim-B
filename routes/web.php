@@ -21,11 +21,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/landing', function () {
-    return view('welcome');
+    return view('landing');
 });
 
 Route::get('/sign-in', [LoguserController::class, 'index'])->name('sign-in');
@@ -41,6 +37,7 @@ Route::post('/sign-up', [RegisuserController::class, 'store']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
 
 // Rute untuk Pegawai
 Route::resource('pegawai', 'PegawaiController');
@@ -58,4 +55,3 @@ Route::get('data-pegawai', function () {
 Route::get('data-user', function () {
     return view('data.user');
 });
-
