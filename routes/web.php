@@ -47,3 +47,15 @@ Route::resource('pegawai', 'PegawaiController');
 
 // Rute untuk User
 Route::resource('user', 'UserController');
+
+Route::get('/pegawai', function () {
+    return view('dashboard-pegawai');
+});
+
+Route::get('data-pegawai', function () {
+    return view('data.pegawai');
+});
+Route::get('data-user', function () {
+    return view('data.user');
+});
+
