@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersTable extends Migration
+class CreatePegawaiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,15 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id('id_user');
-            $table->string('username');
-            $table->string('email')->unique();
-            $table->unsignedBigInteger('id_pegawai_user');
-            $table->foreign('id_pegawai_user')->references('id_pegawai')->on('pegawai');
-            $table->string('user_name');
-            $table->string('password');
-            $table->string('level');
-            $table->string('aktif');
+        Schema::create('pegawai', function (Blueprint $table) {
+            $table->id('id_pegawai');
+            $table->string('nama_pegawai');
+            $table->string('jabatan');
+            $table->string('jenis_kelamin');
+            $table->string('tempat_lahir');
+            $table->date('tanggal_lahir');
+            $table->string('telepon');
+            $table->string('alamat');
             $table->timestamps();
         });
     }
@@ -34,6 +33,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('pegawai');
     }
 }

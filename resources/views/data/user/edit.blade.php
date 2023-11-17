@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('sidebar')
 
 @section('content')
 <div class="container">
@@ -17,6 +17,10 @@
         <div class="form-group">
             <label for="user_name">User Name</label>
             <input type="text" name="user_name" class="form-control" value="{{ $user->user_name }}">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" class="form-control" value="{{ $user->email }}">
         </div>
         <div class="form-group">
             <label for="password">Password</label>

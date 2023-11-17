@@ -12,20 +12,20 @@ class UserController extends Controller
     public function index()
     {
         $users = User::with('pegawai')->get();
-        return view('user.index', ['users' => $users]);
+        return view('data.user.index', ['users' => $users]);
     }
 
     // Menampilkan formulir tambah user
     public function create()
     {
         $pegawais = Pegawai::all();
-        return view('user.create', ['pegawais' => $pegawais]);
+        return view('data.user.create', ['pegawais' => $pegawais]);
     }
 
     // Menyimpan user baru
     public function store(Request $request)
     {
-        
+
         $user = new User;
         $user->user_name = $request->user_name;
         $user->password = $request->password;
@@ -42,7 +42,7 @@ class UserController extends Controller
     {
         $user = User::with('pegawai')->find($id);
         $pegawais = Pegawai::all();
-        return view('user.edit', ['user' => $user, 'pegawais' => $pegawais]);
+        return view('data.user.edit', ['user' => $user, 'pegawais' => $pegawais]);
     }
 
     // Mengupdate user

@@ -14,6 +14,7 @@ class RegisuserController extends Controller
 
     public function store(Request $request){
         $request->validate([
+            'name'=> 'required',
             'email' => 'required|email',
             'password' => 'required',
         ]);

@@ -11,13 +11,13 @@ class PegawaiController extends Controller
     public function index()
     {
         $pegawais = Pegawai::all();
-        return view('pegawai.index', ['pegawais' => $pegawais]);
+        return view('data.pegawai.index', ['pegawais' => $pegawais]);
     }
 
     // Menampilkan formulir tambah pegawai
     public function create()
     {
-        return view('pegawai.create');
+        return view('data.pegawai.create');
     }
 
     // Menyimpan pegawai baru
@@ -40,7 +40,7 @@ class PegawaiController extends Controller
     public function edit($id)
     {
         $pegawai = Pegawai::find($id);
-        return view('pegawai.edit', ['pegawai' => $pegawai]);
+        return view('data.pegawai.edit', ['pegawai' => $pegawai]);
     }
 
     // Mengupdate pegawai

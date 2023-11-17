@@ -1,8 +1,9 @@
-@extends('layouts.app')
+@extends('sidebar')
 
 @section('content')
-<div class="container">
-    <h1>Tambah User</h1>
+<div class="justify-content-center flex align-items-center w-100" style="margin-left: 250px;">
+<div class="bg-secondary h-100 p-4 border-start border-danger">
+        <h6 class="mb-5 ">Form Tambah Pegawai</h6>
     <form action="{{ route('user.store') }}" method="POST">
         @csrf
         <div class="form-group">
@@ -18,6 +19,10 @@
             <input type="text" name="user_name" class="form-control">
         </div>
         <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control">
+        </div>
+        <div class="form-group">
             <label for="password">Password</label>
             <input type="password" name="password" class="form-control">
         </div>
@@ -29,7 +34,9 @@
             <label for="aktif">Aktif</label>
             <input type="text" name="aktif" class="form-control">
         </div>
+        <br>
         <button type="submit" class="btn btn-primary">Simpan</button>
     </form>
+    </div>
 </div>
 @endsection

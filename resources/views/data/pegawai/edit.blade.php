@@ -1,9 +1,10 @@
-@extends('layouts.app')
+@extends('sidebar')
 
 @section('content')
-<div class="container">
-    <h1>Edit Pegawai</h1>
-    <form action="{{ route('pegawai.update', $pegawai->id_pegawai) }}" method="POST">
+<div class="justify-content-center flex align-items-center w-100" style="margin-left: 250px;">
+<div class="bg-secondary h-100 p-4 border-start border-danger">
+        <h6 class="mb-5 ">Form Tambah Pegawai</h6>
+        <form action="{{ route('pegawai.update', $pegawai->id_pegawai) }}" method="POST">
         @csrf
         @method('PATCH')
         <div class="form-group">
@@ -36,5 +37,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Simpan</button>
     </form>
+    </div>
 </div>
 @endsection
+

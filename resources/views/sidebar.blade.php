@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DarkPan | Dashboard</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -31,10 +30,9 @@
     <!-- Template Stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
+<body class="bg-secondary">
 
-<body style="background-image: url('{{ asset('28_img/bg-dash.jpg')}}');" id="page-top">
-
-<div class="container-fluid position-relative d-flex p-0">
+    <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -61,22 +59,23 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="{{ url('/dashboard') }}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Data</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="{{ url('data-user') }}" class="dropdown-item">User</a>
-                            <a href="{{ url('data-pegawai') }}" class="dropdown-item">Pegawai</a>
+                            <a href="{{ url('user') }}" class="dropdown-item">User</a>
+                            <a href="{{ url('pegawai') }}" class="dropdown-item">Pegawai</a>
                         </div>
                     </div>
                 </div>
             </nav>
         </div>
         <!-- Sidebar End -->
-
-        <!-- Content Start -->
-        @yield('content')
+                <!-- Content Start -->
+                @yield('content')
         <!-- content end -->
+    </div>
+
     </body>
 
 <!-- JavaScript Libraries -->
