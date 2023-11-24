@@ -119,20 +119,10 @@
 
                         <!--section-->
 
-                        <div class="form-floating mb-3 text-dark">
-                                <select class="form-select bg-transparent border-danger text-dark" id="level"
-                                    aria-label="Floating label select example">
-                                    <option selected>Select Your Level..</option>
-                                    <option value="admin">Admin</option>
-                                    <option value="pegawai">Pegawai</option>
-                                </select>
-                                <label for="floatingSelect">Level Admin</label>
-                            </div>
-
-                        <!-- email -->  
+                        <!-- email -->
                         <div class="form-floating border-bottom border-danger mb-3 text-dark">
                             <input type="email" name="email" class="form-control bg-transparent border-0 form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" value="{{ old('email') }}" required autofocus>
-                            <label for="email" name="username">Email Address</label>
+                            <label for="email" name="email">Email Address</label>
                             @error('email')
                                 <div class="invalid-feedback">
                                     {{ $message }}
