@@ -1,6 +1,7 @@
 @extends('sidebar')
 
 @section('content')
+<title>Data Pegawai | Edit</title>
 <div class="justify-content-center flex align-items-center w-100" style="margin-left: 250px;">
 <div class="bg-secondary h-100 p-4 border-start border-danger">
         <h6 class="mb-5 ">Form Tambah Pegawai</h6>

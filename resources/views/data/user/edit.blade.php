@@ -1,6 +1,7 @@
 @extends('sidebar')
 
 @section('content')
+<title>Data User | Edit</title>
 <div class="container">
     <h1>Edit User</h1>
     <form action="{{ route('user.update', $user->id_user) }}" method="POST">

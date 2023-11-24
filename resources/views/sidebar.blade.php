@@ -59,14 +59,17 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="{{ url('/dashboard') }}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="{{ url('/dashboard') }}" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Data</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a href="{{ url('user') }}" class="dropdown-item">User</a>
                             <a href="{{ url('pegawai') }}" class="dropdown-item">Pegawai</a>
+                            <a href="{{ url('pasien') }}" class="dropdown-item">Pasien</a>
+                            <a href="{{ url('dokter') }}" class="dropdown-item">Dokter</a>
                         </div>
                     </div>
+                    <a href="{{ url('/pemeriksaan') }}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Pemeriksaan</a>
                 </div>
             </nav>
         </div>

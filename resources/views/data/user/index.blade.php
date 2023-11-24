@@ -1,6 +1,7 @@
 @extends('sidebar')
 
 @section('content')
+<title>Data User</title>
 <div class="bg justify-content-center flex align-items-center text-center w-100" style="margin-left: 250px;">
 
     <div class="bg-secondary rounded h-full p-4">
@@ -22,10 +23,10 @@
                 </tr>
             </thead>
             <tbody class="text-center align-items-center">
-                <?php $i = 1 ?>
+                <?php $i = 0 ?>
                 @foreach($users as $user)
                 <tr>
-                    <th scope="row">{{ $i }}</th>
+                    <th scope="row">{{ $i++ }}</th>
                     <td>{{ $user->pegawai->nama_pegawai }}</td>
                     <td>{{ $user->user_name }}</td>
                     <td>{{ $user->level }}</td>
@@ -40,7 +41,6 @@
                     </td>
                 </tr>
                 @endforeach
-                <?php $i++ ?>
             </tbody>
         </table>
     </div>

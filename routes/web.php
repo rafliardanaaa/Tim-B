@@ -24,19 +24,21 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::get('/sign-in', [LoguserController::class, 'index'])->name('sign-in');
-
-Route::post('/sign-in', [LoguserController::class, 'authanticate']);
-
-Route::get('/user/logout', [LoguserController::class, 'logout'])->name('user.logout');
-
-Route::get('/sign-up', [RegisuserController::class, 'index'])->name('sign-up');
-
-Route::post('/sign-up', [RegisuserController::class, 'store']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+Route::get('/login', [LoguserController::class, 'index'])->name('login');
+
+Route::post('/login', [LoguserController::class, 'login']);
+
+Route::get('/user/logout', [LoguserController::class, 'logout'])->name('user.logout');
+
+
+Route::get('/admin/dashboard', [LoguserController::class, 'dashboard'])->name('admin.dashboard');
+
+Route::get('/pegawai/dashboard', [LoguserController::class, 'dsb'])->name('pegawai.dashboard');
 
 
 // Rute untuk Pegawai
@@ -45,6 +47,11 @@ Route::resource('pegawai', 'PegawaiController');
 // Rute untuk User
 Route::resource('user', 'UserController');
 
-// Route::get('/pegawai', function () {
-//     return view('dashboard-pegawai');
-// });
+// Rute untuk Dokter
+Route::resource('dokter', 'DokterController');
+
+// Rute untuk Pasien
+Route::resource('pasien', 'PasienController');
+
+// Rute untuk Pemeriksaan
+Route::resource('pemeriksaan', 'PemeriksaanController');
